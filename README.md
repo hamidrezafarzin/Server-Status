@@ -50,4 +50,4 @@ run the server_status.py and do the following steps :
 
 
 ## License
-[MIT](https://github.com/H-VICTOOR/Fivem-Status/blob/main/LICENSE)
+[GNU General Public License v3.0](http://www.gnu.org/licenses/)
