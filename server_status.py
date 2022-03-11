@@ -88,36 +88,38 @@ async def set_status(ctx, *, Channel : discord.TextChannel = None):
                 create_data()
                 await asyncio.sleep(2)
             ip = data["Server_ip"]
-            Get_dynamic = get(f'http://{ip}/dynamic.json', timeout=5)
-            Get_players = get(f'http://{ip}/players.json', timeout=5)
-            if ip == None or ip == "" :
-                await ctx.send("Please enter the IP in the config.json file")
-                print("\u001b[33mPlease enter the IP in the config.json file")
-            elif Get_dynamic.status_code == 200 or Get_players.status_code == 200 :
-                await ctx.send("ok i find out the server")
-                data["Channel_id"] = Channel.id
-                Get_dynamic = Get_dynamic.json()
-                Get_players = Get_players.json()
-                Host_name = Get_dynamic["hostname"]
-                # FiveM colored words are filtered here so that they are not displayed
-                for i in data["color_filter"] :
-                    if i in Host_name :
-                        Host_name = Host_name.replace(i, "")
-                embed=discord.Embed(color=0x404EED)
-                embed.description = "**Players: " + str(Get_dynamic["clients"]) + "/" + str(Get_dynamic["sv_maxclients"]) +"**\n"
-                embed.set_author(name=Host_name)
-                
-                for x in Get_players:
-                    embed.description += f"\n" + "> " + "[" + str(x["id"]) + "] " + "`" + str(x["name"]) + "`"
-                embed.set_footer(text="Developed By H_VICTOR#2999 | Updated automatically every 15 seconds")
-                msg = await Channel.send(embed=embed)
-                data["Message_id"] = msg.id
-                with open ("config.json", 'w') as file :
-                    json.dump(data, file, indent=2)
-            elif Get_dynamic.status_code != 200 or Get_players.status_code != 200 :
-                await ctx.send("The server is offline Please check again when the server is online or check the IP address")
+            try :
+                Get_dynamic = get(f'http://{ip}/dynamic.json', timeout=5)
+                Get_players = get(f'http://{ip}/players.json', timeout=5)
+                if ip == None or ip == "" :
+                    await ctx.send("Please enter the IP in the config.json file")
+                    print("\u001b[33mPlease enter the IP in the config.json file")
+                elif Get_dynamic.status_code == 200 or Get_players.status_code == 200 :
+                    await ctx.send("ok i find out the server")
+                    data["Channel_id"] = Channel.id
+                    Get_dynamic = Get_dynamic.json()
+                    Get_players = Get_players.json()
+                    Host_name = Get_dynamic["hostname"]
+                    # FiveM colored words are filtered here so that they are not displayed
+                    for i in data["color_filter"] :
+                        if i in Host_name :
+                            Host_name = Host_name.replace(i, "")
+                    embed=discord.Embed(color=0x404EED)
+                    embed.description = "**Players: " + str(Get_dynamic["clients"]) + "/" + str(Get_dynamic["sv_maxclients"]) +"**\n"
+                    embed.set_author(name=Host_name)
+
+                    for x in Get_players:
+                        embed.description += f"\n" + "> " + "[" + str(x["id"]) + "] " + "`" + str(x["name"]) + "`"
+                    embed.set_footer(text="Developed By H_VICTOR#2999 | Updated automatically every 15 seconds")
+                    msg = await Channel.send(embed=embed)
+                    data["Message_id"] = msg.id
+                    with open ("config.json", 'w') as file :
+                        json.dump(data, file, indent=2)
+                elif Get_dynamic.status_code != 200 or Get_players.status_code != 200 :
+                    await ctx.send("The server is offline Please check again when the server is online or check the IP address")
+                    print("\u001b[33mThe server is offline Please check again when the server is online or check the IP address")
+            except requests.exceptions.ConnectTimeout:
                 print("\u001b[33mThe server is offline Please check again when the server is online or check the IP address")
-            
     else:
         msg = await ctx.send(f"{ctx.message.author} You Do Not have permission To Use This Command")
         await asyncio.sleep(5)
