@@ -12,8 +12,9 @@ Developed By H_VICTOR#2999
 ![Profile](https://user-images.githubusercontent.com/60010616/157981218-ac8d2dd6-1f45-4c7c-9138-7f81f9fdfac8.png)
 
 ## Installation
+1. Download the Project 
 
-install the requirements.txt with  
+2. install the requirements.txt with  
 
 
 ```bash
