@@ -40,13 +40,16 @@ open config.json file and edit the values
 ## Run and setup
 After installation the all requirements and edit config.json file
 
-run the server_status.py and do the following steps :
+Follow the steps below :
+1. Create a bot in Discord developer Portal and copy the token to config.js
 
-1. give yourself a administrator role
+2. run the server_status.py
 
-2. Use the "[Your-Prefix]set_status #mention-a-channel" command in a channel
+3. give yourself a administrator role
 
-3. Done
+4. Use the "[Your-Prefix]set_status #mention-a-channel" command in a channel
+
+5. Done
 
 
 ## License
