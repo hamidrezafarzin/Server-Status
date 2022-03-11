@@ -13,7 +13,7 @@ pip install -r requirements.txt
 
 ## Config
 open config.json file and edit the values
-```json
+```json5
 {
   "TOKEN": "your-token", //Don’t forget that you’ll need to replace the Token
   "prefix": "H!", //Set Your Intended Prefix
