@@ -4,6 +4,13 @@ Server Status a simple bot script to display a list of Fivem / Redm server’s p
 
 Developed By H_VICTOR#2999
 
+## Preview
+
+![in channel](https://user-images.githubusercontent.com/60010616/157981567-1c97d98e-8639-43a1-abf8-19505f367602.png)
+
+
+![Profile](https://user-images.githubusercontent.com/60010616/157981218-ac8d2dd6-1f45-4c7c-9138-7f81f9fdfac8.png)
+
 ## Installation
 
 install the requirements.txt with  
