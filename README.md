@@ -1,6 +1,6 @@
 # Server status
 
-Server status a simple bot script to show a list of Fivem/Redm server players on Discord Channel .
+Server Status a simple bot script to display a list of Fivem / Redm server’s players on the Discord channel.
 
 Developed By H_VICTOR#2999
 
