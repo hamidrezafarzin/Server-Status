@@ -41,7 +41,7 @@ open config.json file and edit the values
 After installation the all requirements and edit config.json file
 
 Follow the steps below :
-1. Create a bot in Discord developer Portal and copy the token to config.js
+1. Create a bot in Discord developer Portal and copy the token to config.json
 
 2. run the server_status.py
 
