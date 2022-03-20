@@ -51,13 +51,15 @@ After installation the all requirements and edit config.json file
 Follow the steps below :
 1. Create a bot in Discord developer Portal and copy the token to config.json
 
-2. run the server_status.py
+2. Set Your Fivem or Redm Server Ip and Port
 
-3. give yourself a administrator role
+3. run the server_status.py
 
-4. Use the "[Your-Prefix]set_status #mention-a-channel" command in a channel
+4. give yourself a administrator role
 
-5. Done
+5. Use the "[Your-Prefix]set_status #mention-a-channel" command in a channel
+
+6. Done
 
 
 ## License
