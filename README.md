@@ -14,6 +14,8 @@ Developed By H_VICTOR#2999
 ## Installation
 1. Download the Project 
 
+2. open cmd in project folder
+
 2. install the requirements.txt with  
 
 
@@ -57,7 +59,7 @@ Follow the steps below :
 
 4. give yourself a administrator role
 
-5. Use the "[Your-Prefix]set_status #mention-a-channel" command in a channel
+5. Use the "[Your-Prefix]set_status #mention-a-channel" command in a channel, Example : H!set_status #general
 
 6. Done
 
