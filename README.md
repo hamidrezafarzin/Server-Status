@@ -27,7 +27,7 @@ open config.json file and edit the values
 {
   "TOKEN": "your-token", //Don’t forget that you’ll need to replace the Token
   "prefix": "H!", //Set Your Intended Prefix
-  "Server_ip": "Your ip:30120", //Set Your Server Fivem or Redm Ip and Port
+  "Server_ip": "Your ip:30120", //Set Your Fivem or Redm Server Ip and Port
   "Channel_id": null, //Do not edit Channel_id
   "Message_id": null, // Do not edit Message_id
   //Do not edit color filters
